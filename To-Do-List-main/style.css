@@ -8,7 +8,7 @@
 .container {
 	width: 100vw;
 	height: 100vh;
-	background-color: #000;
+	background-color: #004D78;
 	padding: 20px;
 	display: flex;
 	justify-content: center;
@@ -29,36 +29,38 @@
 }
 
 .title {
-	height: 10%;
+	height: 100px;
 	display: flex;
 	align-items: center;
 }
 
 .row {
-	height: 10%;
+	height: 100px;
 	display: flex;
 	width: 100%;
-	padding-top: 7px;
+	padding-top: 0px;
 	gap: 2px;
+	align-items: center;
+
 }
 #input-box {
 	flex: 1;
-	height: 30px;
+	height: 50px;
 	padding: 0 10px;
 }
 
 button {
 	border: none;
 	outline: none;
-	background-color: #000;
+	background-color: #004D78;
 	padding: 0 10px;
-	margin-left: 3px;
+	margin-left: 5px;
 	color: #fff;
 	cursor: pointer;
-	height: 30px;
+	height: 50px;
 }
 button:hover {
-	background-color: #444;
+	background-color: #6F6F6F;
 }
 
 .scroll {
@@ -70,10 +72,10 @@ button:hover {
 	width: 5px;
 }
 .scroll::-webkit-scrollbar-thumb {
-	background-color: #000;
+	background-color: #004D78;
 }
 .scroll::-webkit-scrollbar-track {
-	background-color: #444;
+	background-color: #DADADA;
 }
 
 ul li {
@@ -142,7 +144,7 @@ ul li:hover {
 h1 {
 	color: azure;
 	text-align: center;
-	font-size: 40px;
+	font-size: 60px;
 	margin-top: 0;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: 900;
@@ -151,7 +153,7 @@ h1 {
 p {
 	color: azure;
 	text-align: center;
-	font-size: 25px;
+	font-size: 30px;
 	margin-top: 0px;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
