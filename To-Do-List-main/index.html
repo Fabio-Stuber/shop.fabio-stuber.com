@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>IPA INTRANET</h1>
+            <p id="demo"></p>
+            <div class="todo-app">
+                <div class="title">
+                    <h2>TODO LISTE IPA</h2>
+                </div>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add Your Text">
+                    <button onclick="addTask()" class="btn1">Add Text</button>
+                    <button onclick="addTask()" id="addtodo" class="btn2">Add</button>
+                </div>
+                <ul id="list-container" class="scroll">
+                    <!-- <li class="checked">Task 1</li>
+                    <li>Task 1</li>
+                    <li>Task 1</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var input = document.getElementById("input-box");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("addtodo").click();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("apr 15, 2025 13:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "IPA Ende";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
