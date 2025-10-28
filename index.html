@@ -28,6 +28,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '800569473040815');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_ids: ['123'], // 'REQUIRED': array of product IDs
+  content_type: 'product', // RECOMMENDED: Either product or product_group based on the content_ids or contents being passed.
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=800569473040815&ev=PageView&noscript=1"
